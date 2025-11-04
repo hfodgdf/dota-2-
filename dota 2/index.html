@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dota 2 — Топ 3 герої</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0d0d0d;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+    header p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .heroes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .card:hover img {
+      filter: grayscale(0%);
+    }
+
+    .card h2 {
+      margin-top: 15px;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #222;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dota 2 — Топ 3 герої</h1>
+    <p>Найкращі персонажі гри • The best Dota 2 heroes</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Обери героя / Choose your hero</h2>
+
+      <div class="heroes">
+        <!-- Riki -->
+        <div class="card" onclick="openHero('riki')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/riki.png" alt="Riki">
+          <h2>Riki</h2>
+          <p>Невидимий вбивця, атакує з тіні. <br>Invisible assassin striking from the shadows.</p>
+        </div>
+
+        <!-- Phantom Lancer -->
+        <div class="card" onclick="openHero('phantom_lancer')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_lancer.png" alt="Phantom Lancer">
+          <h2>Phantom Lancer</h2>
+          <p>Майстер ілюзій, створює копії себе. <br>Master of illusions who confuses enemies.</p>
+        </div>
+
+        <!-- Monkey King -->
+        <div class="card" onclick="openHero('monkey_king')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/monkey_king.png" alt="Monkey King">
+          <h2>Monkey King</h2>
+          <p>Король мавп — спритний і хитрий воїн. <br>The Monkey King — agile and clever fighter.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Dota 2 Fan Project — для навчальних цілей. Images © Valve.
+  </footer>
+
+  <script>
+    function openHero(heroId) {
+      const url = `https://www.dota2.com/hero/${heroId}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
